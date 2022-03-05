@@ -1,29 +1,14 @@
-let x = "ferhat";
-let age = 25;
-
-function myFun() {
-  return x + age;
+function Test(callback) {
+  setTimeout(() => {
+    callback("First async");
+  }, 4000);
 }
+console.log("sync1");
 
-console.log(myFun());
+setTimeout(() => {
+  ((text) => {
+    console.log(text+"güzel oldu");
+  });Test
+}, 1000);
 
-let person = {
-  name: "ferhat",
-  age: 27,
-  greeting: () => {
-    return person.name;
-  },
-};
-
-console.log(person.greeting());
-
-
-
-
-
-
-
-
-
-
-
+console.log("sync2");
